@@ -1,0 +1,135 @@
+#projects {
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  align-items: center;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow projects to wrap onto next line on smaller screens */
+  justify-content: space-around; /* Distribute projects evenly */
+  max-width: 1200px; /* Limit width for better layout */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.project {
+  width: 30%; /* Adjust width as needed */
+  margin-bottom: 2rem; /* Add spacing between projects */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 5px;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.project-image {
+  width: 50%; /* Make image fill container width */
+}
+
+.project-image img {
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-title {
+  margin-top: 0; /* Remove extra space above the title */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Example button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 455px;
+  margin: 0 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; /* Adjust as needed */
+  max-width: 500px; /* Adjust for consistency */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel-item img {
+  
+  border-radius: 7px;
+  width: 100%;
+  max-width: 200px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop to fit if needed */
+  margin-bottom: 10px; /* Add spacing below images */
+}
+/* Consistent text and spacing for paragraphs */
+.carousel-item p {
+  font-size: 1rem;
+  margin: 15px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+/* Responsive adjustments (Media Queries): */
+@media (max-width: 768px) {
+  .carousel-item {
+    max-width: 100%; /* Allow full width on small screens */
+  }
+
+  .carousel-item img {
+    max-width: 100%; /* Scale images */
+  }
+
+  .carousel-item h2 {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+}
